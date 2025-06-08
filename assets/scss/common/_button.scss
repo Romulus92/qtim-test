@@ -1,0 +1,52 @@
+@use "../mixins/focus" as *;
+@use "../mixins/hover" as *;
+@use "../mixins/breakpoints" as *;
+@use "variables" as *;
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 5.2rem;
+  font-size: 2rem;
+  line-height: 100%;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  border-radius: 10rem;
+  transition: all 0.3s ease-in-out;
+  border: 0.2rem solid $color-text;
+  background-color: $color-text;
+  color: white;
+  width: fit-content;
+  padding: 1.6rem 3.2rem;
+  
+  @include hover() {
+    border: 0.2rem solid $color-border;
+    background: white;
+    color: $color-text;
+  }
+
+  &_transparent {
+    border: 0.2rem solid $color-border;
+    background: $color-white;
+    padding: 1.4rem;
+
+    @include hover() {
+      border: 0.2rem solid $color-text;
+      background: $color-text;
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.clean-btn {
+  background-color: transparent;
+  border: none;
+}

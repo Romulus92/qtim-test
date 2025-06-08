@@ -1,0 +1,63 @@
+@use "../../assets/scss/mixins/grid.scss" as *;
+@use "../../assets/scss/common/variables" as *;
+
+.footer {
+	background: $color-brand;
+	padding-top: 14rem;
+
+	&-content {
+		@include container(2);
+	}
+
+	&-question {
+		display: block;
+		font-size: 1.6rem;
+		line-height: 120%;
+		margin-bottom: 5.6rem;
+	}
+
+	&-answer {
+		display: flex;
+		flex-direction: column;
+
+		&-item {
+			position: relative;
+			font-size: 11.2rem;
+			line-height: 100%;
+			width: fit-content;
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: .8rem;
+				bottom: 1.7rem;
+				height: .1rem;
+				background: $color-text;
+				width: 98%;
+				z-index: 1;
+			}
+		}
+
+		.g-wrapper {
+			position: relative;
+			display: inline-block;
+			z-index: 2;
+
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 1.7rem;
+				left: -1.2rem;
+				width: 8.3rem;
+				height: 0.1rem;
+				background: $color-brand;
+				z-index: 1;
+			}
+		}
+
+		.g-char {
+			position: relative;
+			z-index: 2;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+@use "sass:math";
+// Colors
+$color-black: #101010;
+$color-dark-gray: #232323;
+$color-gray: #E8E8E8;
+$color-light-gray: #F3F3F3;
+$color-white: #FFFFFF;
+$color-lilac: #E2BEFF;
+
+$color-text: $color-black;
+$color-brand: $color-lilac;
+$color-background: $color-light-gray;
+$color-border: $color-gray;
+
+// Breakpoints
+$mr: math.div(37em, 1.6); // Micro devices 350px
+$sm: math.div(57.5em, 1.6);
+$md: math.div(76.8em, 1.6);
+$lg: math.div(99.1em, 1.6);
+$xl: math.div(124em, 1.6);
+$xxl: math.div(144em, 1.6);
+$gt: math.div(168em, 1.6); // Giant devices 1780px
+$eg: math.div(390em, 1.6); // Extra giant devices 3900px
+$container-max-width: math.div(192em, 1.6);

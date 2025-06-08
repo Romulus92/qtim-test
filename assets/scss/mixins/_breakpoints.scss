@@ -1,0 +1,84 @@
+@use "sass:math";
+@use "../common/variables" as *;
+
+@mixin to($media) {
+  @if $media == mr {
+    @media only screen and (min-width: $mr) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media only screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (min-width: $md) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (min-width: $lg) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media only screen and (min-width: $xl) {
+      @content;
+    }
+  } @else if $media == xxl {
+    @media only screen and (min-width: $xxl) {
+      @content;
+    }
+  } @else if $media == gt {
+    @media only screen and (min-width: $gt) {
+      @content;
+    }
+  } @else if $media == eg {
+    @media only screen and (min-width: $eg) {
+      @content;
+    }
+  }
+}
+
+@mixin from($media) {
+  @if $media == mr {
+    @media only screen and (max-width: ($mr - math.div(1em, 16))) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media only screen and (max-width: ($sm - math.div(1em, 16))) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (max-width: ($md - math.div(1em, 16))) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (max-width: ($lg - math.div(1em, 16))) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media only screen and (max-width: ($xl - math.div(1em, 16))) {
+      @content;
+    }
+  } @else if $media == xxl {
+    @media only screen and (max-width: ($xxl - math.div(1em, 16))) {
+      @content;
+    }
+  } @else if $media == gt {
+    @media only screen and (max-width: ($gt - math.div(1em, 16))) {
+      @content;
+    }
+  } @else if $media == eg {
+    @media only screen and (max-width: ($eg - math.div(1em, 16))) {
+      @content;
+    }
+  }
+}
+
+@mixin between($lower: null, $upper: null) {
+  @if $lower and $upper {
+    @include to($lower) {
+      @include from($upper) {
+        @content;
+      }
+    }
+  }
+}
