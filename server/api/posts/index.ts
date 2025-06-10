@@ -5,8 +5,6 @@ export default defineEventHandler(async (event) => {
 	const query = getQuery(event)
 
   const posts: Article[] = JSON.parse(JSON.stringify(data))
-
-	console.log(posts)
 	
 	const limit = query.limit ? query.limit : posts.length
 	const offset = query.offset ? query.offset : 0
