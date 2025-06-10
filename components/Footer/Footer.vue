@@ -37,7 +37,9 @@
 					<a target="_blank" class="footer-links-item">Instagram</a>
 					<a target="_blank" class="footer-links-item">Telegram</a>
 				</div>
-				<a class="footer-go">Go</a>
+				<div class="footer-go">
+					<a href="" class="footer-go-link">Go</a>
+				</div>
 				<div class="footer-links">
 					<a target="_blank" class="footer-links-item">Behance</a>
 					<a target="_blank" class="footer-links-item">Linkedn</a>

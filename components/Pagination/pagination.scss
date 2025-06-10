@@ -1,0 +1,54 @@
+@use "../../assets/scss/mixins/grid.scss" as *;
+@use "../../assets/scss/common/variables" as *;
+@use "../../assets/scss/mixins/hover.scss" as *;
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+
+  &__item,
+  &__prev,
+  &__next,
+  &__ellipsis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    background-color: $color-background;
+    border: none;
+    border-radius: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+    user-select: none;
+
+    @include hover {
+      background-color: $color-border;
+    }
+  }
+
+	&__next, &__prev {
+		&:disabled {
+			display: none;
+		}
+	}
+
+  &__prev {
+    transform: rotateZ(180deg);
+  }
+
+  &__ellipsis {
+    pointer-events: none;
+  }
+
+  &__item {
+    line-height: 1;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    &--active {
+      background-color: $color-text;
+      color: $color-white;
+      pointer-events: none;
+    }
+  }
+}

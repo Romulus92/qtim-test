@@ -1,0 +1,54 @@
+@use "../../assets/scss/mixins/grid.scss" as *;
+@use "../../assets/scss/common/variables" as *;
+@use "../../assets/scss/mixins/hover.scss" as *;
+
+.articles {
+	margin-top: 12rem;
+	margin-bottom: 14rem;
+	@include container(2);
+
+	h1 {
+		margin-bottom: 6rem;
+	}
+
+	&-list {
+		display: grid;
+		gap: 6rem 3.2rem;
+		grid-template-columns: repeat(4, 1fr);
+		margin-bottom: 5rem;
+	}
+
+	&-item {
+		position: relative;
+		transition: all 0.3s ease-in-out;
+
+		@include hover {
+			transform: translateY(-2rem);
+
+			.articles-more {
+				opacity: 1;
+			}
+		}
+	}
+
+	&-picture {
+		margin-bottom: 2.4rem;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&-title {
+		margin-bottom: 3.6rem;
+	}
+
+	&-more {
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		color: $color-brand;
+		transition: all 0.3s ease-in-out;
+	}
+}

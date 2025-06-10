@@ -2,7 +2,16 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "nuxt-svgo"],
+  modules: [
+    "@nuxt/eslint",
+    "nuxt-svgo", 
+    [
+      "@pinia/nuxt",
+      {
+        autoImports: ["defineStore", "acceptHMRUpdate"]
+      }
+    ],
+  ],
   css: ["~/assets/scss/style.scss"],
 
   svgo: {

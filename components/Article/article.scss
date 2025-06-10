@@ -1,0 +1,28 @@
+@use "../../assets/scss/mixins/grid.scss" as *;
+@use "../../assets/scss/common/variables" as *;
+
+.article {
+	margin-top: 12rem;
+	margin-bottom: 8rem;
+	@include container(2);
+
+	h1 {
+		margin-bottom: 7rem;
+	}
+
+	&-picture {
+		margin-bottom: 8rem;
+	}
+
+	&-subtitle {
+		display: inline-block;
+		font-size: 1.6rem;
+		margin-bottom: 3.2rem;
+	}
+
+	&-text {
+		font-size: 3.6rem;
+		line-height: 124%;
+		max-width: 69.5rem;
+	}
+}
